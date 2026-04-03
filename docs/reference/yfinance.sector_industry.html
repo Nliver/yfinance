@@ -46,7 +46,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Sector" href="api/yfinance.Sector.html" />
-    <link rel="prev" title="Search" href="api/yfinance.Search.html" />
+    <link rel="prev" title="AsyncWebSocket" href="api/yfinance.AsyncWebSocket.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -361,13 +361,21 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Market.html">Market</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="yfinance.calendars.html">Calendars</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Calendars.html">Calendars</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="yfinance.financials.html">Financials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.get_income_stmt.html">yfinance.Ticker.get_income_stmt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.income_stmt.html">yfinance.Ticker.income_stmt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.quarterly_income_stmt.html">yfinance.Ticker.quarterly_income_stmt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.ttm_income_stmt.html">yfinance.Ticker.ttm_income_stmt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.get_balance_sheet.html">yfinance.Ticker.get_balance_sheet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.balance_sheet.html">yfinance.Ticker.balance_sheet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.get_cashflow.html">yfinance.Ticker.get_cashflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.cashflow.html">yfinance.Ticker.cashflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.quarterly_cashflow.html">yfinance.Ticker.quarterly_cashflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.ttm_cashflow.html">yfinance.Ticker.ttm_cashflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.get_earnings.html">yfinance.Ticker.get_earnings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.earnings.html">yfinance.Ticker.earnings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.calendar.html">yfinance.Ticker.calendar</a></li>
@@ -416,12 +424,14 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.mutualfund_holders.html">yfinance.Ticker.mutualfund_holders</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="yfinance.market.html">Market</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Market.html">Market</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="yfinance.search.html">Search &amp; Lookup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Search.html">Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Lookup.html">Lookup</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="yfinance.search.html">Search &amp; News</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Search.html">Search</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="yfinance.websocket.html">WebSocket</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.WebSocket.html">WebSocket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.AsyncWebSocket.html">AsyncWebSocket</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Sector and Industry</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -510,10 +520,10 @@ document.write(`
 <p>The <cite>Sector</cite> and <cite>Industry</cite> modules provide access to the Sector and Industry information.</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/yfinance.Sector.html#yfinance.Sector" title="yfinance.Sector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Sector</span></code></a>(key[, session, proxy])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/yfinance.Sector.html#yfinance.Sector" title="yfinance.Sector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Sector</span></code></a>(key[, session])</p></td>
 <td><p>Represents a financial market sector and allows retrieval of sector-related data such as top ETFs, top mutual funds, and industry data.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="api/yfinance.Industry.html#yfinance.Industry" title="yfinance.Industry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Industry</span></code></a>(key[, session, proxy])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="api/yfinance.Industry.html#yfinance.Industry" title="yfinance.Industry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Industry</span></code></a>(key[, session])</p></td>
 <td><p>Represents an industry within a sector.</p></td>
 </tr>
 </tbody>
@@ -522,7 +532,7 @@ document.write(`
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><a class="reference internal" href="api/yfinance.Sector.html#yfinance.Sector.industries" title="yfinance.Sector.industries"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Sector.industries</span></code></a></dt><dd><p>Map of sector and industry</p>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">Sector.industries</span></code></dt><dd><p>Map of sector and industry</p>
 </dd>
 </dl>
 </div>
@@ -585,12 +595,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="api/yfinance.Search.html"
+       href="api/yfinance.AsyncWebSocket.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Search</p>
+        <p class="prev-next-title">AsyncWebSocket</p>
       </div>
     </a>
     <a class="right-next"

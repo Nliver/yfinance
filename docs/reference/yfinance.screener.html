@@ -361,13 +361,21 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Market.html">Market</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="yfinance.calendars.html">Calendars</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Calendars.html">Calendars</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="yfinance.financials.html">Financials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.get_income_stmt.html">yfinance.Ticker.get_income_stmt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.income_stmt.html">yfinance.Ticker.income_stmt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.quarterly_income_stmt.html">yfinance.Ticker.quarterly_income_stmt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.ttm_income_stmt.html">yfinance.Ticker.ttm_income_stmt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.get_balance_sheet.html">yfinance.Ticker.get_balance_sheet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.balance_sheet.html">yfinance.Ticker.balance_sheet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.get_cashflow.html">yfinance.Ticker.get_cashflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.cashflow.html">yfinance.Ticker.cashflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.quarterly_cashflow.html">yfinance.Ticker.quarterly_cashflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.ttm_cashflow.html">yfinance.Ticker.ttm_cashflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.get_earnings.html">yfinance.Ticker.get_earnings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.earnings.html">yfinance.Ticker.earnings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.calendar.html">yfinance.Ticker.calendar</a></li>
@@ -416,12 +424,14 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="api/yfinance.Ticker.mutualfund_holders.html">yfinance.Ticker.mutualfund_holders</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="yfinance.market.html">Market</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Market.html">Market</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="yfinance.search.html">Search &amp; Lookup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Search.html">Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Lookup.html">Lookup</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="yfinance.search.html">Search &amp; News</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/yfinance.Search.html">Search</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="yfinance.websocket.html">WebSocket</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.WebSocket.html">WebSocket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/yfinance.AsyncWebSocket.html">AsyncWebSocket</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="yfinance.sector_industry.html">Sector and Industry</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -516,7 +526,7 @@ document.write(`
 <tr class="row-even"><td><p><a class="reference internal" href="api/yfinance.FundQuery.html#yfinance.FundQuery" title="yfinance.FundQuery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FundQuery</span></code></a>(operator, operand)</p></td>
 <td><p>The <cite>FundQuery</cite> class constructs filters for mutual funds based on specific criteria such as region, sector, exchange, and peer group.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/yfinance.screen.html#yfinance.screen" title="yfinance.screen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">screen</span></code></a>(query[, offset, size, sortField, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/yfinance.screen.html#yfinance.screen" title="yfinance.screen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">screen</span></code></a>(query[, offset, size, count, ...])</p></td>
 <td><p>Run a screen: predefined query, or custom query.</p></td>
 </tr>
 </tbody>
@@ -525,13 +535,13 @@ document.write(`
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><a class="reference internal" href="api/yfinance.EquityQuery.html#yfinance.EquityQuery.valid_fields" title="yfinance.EquityQuery.valid_fields"><code class="xref py py-attr docutils literal notranslate"><span class="pre">EquityQuery.valid_fields</span></code></a></dt><dd><p>supported operand values for query</p>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">EquityQuery.valid_fields</span></code></dt><dd><p>supported operand values for query</p>
 </dd>
-<dt><a class="reference internal" href="api/yfinance.EquityQuery.html#yfinance.EquityQuery.valid_values" title="yfinance.EquityQuery.valid_values"><code class="xref py py-attr docutils literal notranslate"><span class="pre">EquityQuery.valid_values</span></code></a></dt><dd><p>supported <cite>EQ query operand parameters</cite></p>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">EquityQuery.valid_values</span></code></dt><dd><p>supported <cite>EQ query operand parameters</cite></p>
 </dd>
-<dt><a class="reference internal" href="api/yfinance.FundQuery.html#yfinance.FundQuery.valid_fields" title="yfinance.FundQuery.valid_fields"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FundQuery.valid_fields</span></code></a></dt><dd><p>supported operand values for query</p>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">FundQuery.valid_fields</span></code></dt><dd><p>supported operand values for query</p>
 </dd>
-<dt><a class="reference internal" href="api/yfinance.FundQuery.html#yfinance.FundQuery.valid_values" title="yfinance.FundQuery.valid_values"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FundQuery.valid_values</span></code></a></dt><dd><p>supported <cite>EQ query operand parameters</cite></p>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">FundQuery.valid_values</span></code></dt><dd><p>supported <cite>EQ query operand parameters</cite></p>
 </dd>
 </dl>
 </div>
